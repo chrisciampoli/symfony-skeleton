@@ -17,7 +17,7 @@ services:
 
   php-fpm:
     build:
-      context: ./php-fpm
+      context: ./Docker/php-fpm
     depends_on:
       - database
     environment:
@@ -29,12 +29,12 @@ services:
 
   nginx:
     build:
-      context: ./nginx
+      context: ./Docker/nginx
     volumes:
       - ./App:/var/www
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/sites/:/etc/nginx/sites-available
-      - ./nginx/conf.d/:/etc/nginx/conf.d
+      - ./Docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./Docker/nginx/sites/:/etc/nginx/sites-available
+      - ./Docker/nginx/conf.d/:/etc/nginx/conf.d
       - ./logs:/var/log
     depends_on:
       - php-fpm
