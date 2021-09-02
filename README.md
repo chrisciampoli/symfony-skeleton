@@ -1,4 +1,4 @@
-# Luxer Symfony Base
+# Symfony Base
 
 Used for testing backend devs - or - as a base development project
 
