@@ -1,4 +1,3 @@
 #!/bin/bash
-cd Docker
 docker-compose pull
 docker-compose up --build &
